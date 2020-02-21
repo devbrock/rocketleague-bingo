@@ -4,7 +4,7 @@
     v-bind:class="{'line-through bg-green-500': task.completed}"
     v-on:click="markComplete"
   >
-    <span>{{task.title}}</span>
+    <span class="uppercase">{{task.title}}</span>
   </div>
 </template>
 
