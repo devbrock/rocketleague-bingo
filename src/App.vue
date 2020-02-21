@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="bg-gray-100 min-h-screen box-border">
-    <div class="max-w-6xl px-16 py-8 mx-auto min-h-screen">
+    <div class="md:max-w-full lg:max-w-6xl md:px-2 lg:px-16 py-8 mx-auto min-h-screen">
       <div class="text-center">
         <img class="h-48 mx-auto" alt="rocket league logo" src="./assets/rocket-league-logo.png" />
         <h1 class="font-bold text-4xl text-gray-900 mx-auto">Welcome To Rocket League Bingo!</h1>

@@ -1,5 +1,5 @@
 <template>
-  <div class="justify-center flex flex-col">
+  <div class="justify-center flex flex-col flex-1 overflow-auto">
     <table class="table-auto mt-12 border-collapse bg-gray-300">
       <tbody>
         <tr>
