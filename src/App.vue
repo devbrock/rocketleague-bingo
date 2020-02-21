@@ -1,18 +1,26 @@
 <template>
   <div id="app" class="bg-gray-100 min-h-screen box-border">
-    <div class="max-w-6xl p-16 mx-auto min-h-screen">
-      <h1 class="font-bold text-4xl text-gray-900 mx-auto">Welcome To Rocket League Bingo!</h1>
-      <p
-        class="text-sm text-gray-600"
-      >To begin, enter up to 25 challenges to add to your Bingo Card!</p>
+    <div class="max-w-6xl px-16 py-8 mx-auto min-h-screen">
+      <div class="text-center">
+        <img class="h-48 mx-auto" alt="rocket league logo" src="./assets/rocket-league-logo.png" />
+        <h1 class="font-bold text-4xl text-gray-900 mx-auto">Welcome To Rocket League Bingo!</h1>
+        <p class="text-sm text-gray-600">Here is your randomized challenge card!</p>
+      </div>
 
-      <!-- <img class="h-48 mx-auto" alt="rocket league logo" src="./assets/rocket-league.svg" /> -->
-      <button
+      <!-- <button
         class="mt-4 px-4 py-2 bg-blue-900 text-gray-100 font-medium focus:outline-none hover:bg-gray-300 hover:text-blue-900"
         v-on:click="addChallenge"
-      >Add A Challenge</button>
+      >Add A Challenge</button>-->
       <BingoCard v-bind:tasks="tasks" />
     </div>
+    <footer class="text-center text-sm text-gray-500 py-2 flex justify-center">
+      <ul class="flex">
+        <li class="mx-2">Copyright &copy; Brock Balducci 2020</li>
+        <li class="mx-2">
+          <a href="https://github.com/devbrock/rocketleague-bingo" target="_blank">Github</a>
+        </li>
+      </ul>
+    </footer>
   </div>
 </template>
 
