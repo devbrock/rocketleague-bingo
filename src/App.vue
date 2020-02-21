@@ -47,7 +47,7 @@ export default {
     return {
       tasks: [
         { title: "Score a hat trick", completed: false },
-        { title: "opponent has anime profile pciture", completed: false },
+        { title: "opponent has anime profile picture", completed: false },
         { title: "3 minute overtime", completed: false },
         { title: "rule 1", completed: false },
         { title: "enemy is toxic", completed: false },
