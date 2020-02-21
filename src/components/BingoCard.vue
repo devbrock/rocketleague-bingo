@@ -15,12 +15,12 @@
         </tr>
         <tr>
           <td v-for="task in tasks.slice(5,10)" v-bind:key="task.title">
-            <CardItem v-bind:task="task" />
+            <CardItem v-bind:task="task" v-on:checkWin="checkWin" />
           </td>
         </tr>
         <tr>
           <td v-for="task in tasks.slice(10,12)" v-bind:key="task.title">
-            <CardItem v-bind:task="task" id="tasks.indexof(task)" />
+            <CardItem v-bind:task="task" v-on:checkWin="checkWin" />
           </td>
           <td>
             <div
@@ -28,17 +28,17 @@
             >Free</div>
           </td>
           <td v-for="task in tasks.slice(13,15)" v-bind:key="task.title">
-            <CardItem v-bind:task="task" />
+            <CardItem v-bind:task="task" v-on:checkWin="checkWin" />
           </td>
         </tr>
         <tr>
           <td v-for="task in tasks.slice(15,20)" v-bind:key="task.title">
-            <CardItem v-bind:task="task" />
+            <CardItem v-bind:task="task" v-on:checkWin="checkWin" />
           </td>
         </tr>
         <tr>
           <td v-for="task in tasks.slice(20,25)" v-bind:key="task.title">
-            <CardItem v-bind:task="task" />
+            <CardItem v-bind:task="task" v-on:checkWin="checkWin" />
           </td>
         </tr>
       </tbody>
