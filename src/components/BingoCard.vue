@@ -16,7 +16,11 @@
           <td v-for="task in tasks.slice(10,12)" v-bind:key="task.title">
             <CardItem v-bind:task="task" />
           </td>
-          <td class="line-through bg-green-500 text-gray-800 text-center">Free</td>
+          <td>
+            <div
+              class="line-through bg-green-500 text-gray-800 text-center px-4 py-8 uppercase"
+            >Free</div>
+          </td>
           <td v-for="task in tasks.slice(13,15)" v-bind:key="task.title">
             <CardItem v-bind:task="task" />
           </td>
