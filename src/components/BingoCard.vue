@@ -1,10 +1,16 @@
 <template>
   <div class="justify-center flex flex-col flex-1 overflow-auto">
+    <h1 v-if="won" class="text-6xl text-center text-green-500 font-bold">You won!</h1>
+    <img
+      v-if="won"
+      src="https://media.giphy.com/media/xUPGcF89oa1gwy96LK/giphy.gif"
+      class="max-w-sm mx-auto"
+    />
     <table class="table-auto mt-12 border-collapse bg-gray-300">
       <tbody>
         <tr>
           <td v-for="task in tasks.slice(0,5)" v-bind:key="task.title">
-            <CardItem v-bind:task="task" />
+            <CardItem v-bind:task="task" v-on:checkWin="checkWin" />
           </td>
         </tr>
         <tr>
@@ -14,7 +20,7 @@
         </tr>
         <tr>
           <td v-for="task in tasks.slice(10,12)" v-bind:key="task.title">
-            <CardItem v-bind:task="task" />
+            <CardItem v-bind:task="task" id="tasks.indexof(task)" />
           </td>
           <td>
             <div
@@ -44,27 +50,42 @@
 import CardItem from "./CardItem";
 export default {
   name: "BingoCard",
-  props: ["tasks"],
+  props: ["tasks", "taskId", "tasksCompleted"],
   components: { CardItem },
   data() {
     return {
-      bingoArrays = [
+      bingoArrays: [
         [1, 2, 3, 4, 5],
         [6, 7, 8, 9, 10],
-        [11, 12 ,13,14,15],
-        [16,17,18,19,20],
-        [21,22,23,24,25],
-        [1,6,11,16,21],
-        [2,7,12,17,22],
-        [3,8,12,18,23],
-        [4,9,14,19,24],
-        [5,10,15,20,25],
-        [1,7,12,17,22],
-        [5,9,13,17,21]
-      ]
+        [11, 12, 13, 14, 15],
+        [16, 17, 18, 19, 20],
+        [21, 22, 23, 24, 25],
+        [1, 6, 11, 16, 21],
+        [2, 7, 12, 17, 22],
+        [3, 8, 12, 18, 23],
+        [4, 9, 14, 19, 24],
+        [5, 10, 15, 20, 25],
+        [1, 7, 12, 17, 22],
+        [5, 9, 13, 17, 21]
+      ],
+      won: false
     };
   },
-  methods: {}
+  methods: {
+    checkWin(title) {
+      console.log("clicked " + title);
+      let index = this.$props.tasks.findIndex(x => x.title === title);
+      this.$props.tasksCompleted.push(index + 1);
+      console.log(this.$props.tasksCompleted);
+
+      let completed = JSON.stringify(this.$props.tasksCompleted);
+      let winners = JSON.stringify(this.bingoArrays);
+      let found = winners.indexOf(completed);
+      if (found != -1) {
+        this.won = true;
+      }
+    }
+  }
 };
 </script>
 

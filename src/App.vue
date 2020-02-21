@@ -11,7 +11,7 @@
         class="mt-4 px-4 py-2 bg-blue-900 text-gray-100 font-medium focus:outline-none hover:bg-gray-300 hover:text-blue-900"
         v-on:click="addChallenge"
       >Add A Challenge</button>-->
-      <BingoCard v-bind:tasks="tasks" />
+      <BingoCard v-bind:tasks="tasks" :tasksCompleted="tasksCompleted" />
     </div>
     <footer class="text-center text-sm text-gray-500 py-2 flex justify-center">
       <ul class="flex">
@@ -46,13 +46,16 @@ export default {
   data() {
     return {
       tasks: [
-        { title: "Score a hat trick", completed: false },
+        {
+          title: "Score a hat trick",
+          completed: false
+        },
         { title: "opponent has anime profile picture", completed: false },
         { title: "3 minute overtime", completed: false },
         { title: "rule 1", completed: false },
         { title: "enemy is toxic", completed: false },
         { title: "lag indicator", completed: false },
-        { title: "test challenge", completed: false },
+        { title: "score an own goal", completed: false },
         { title: "pre flip goal", completed: false },
         { title: "ground pinch goal", completed: false },
         { title: "turtle goal", completed: false },
@@ -71,7 +74,8 @@ export default {
         { title: "score a double  tap", completed: false },
         { title: "demo both opponents", completed: false },
         { title: "score an air dribble goal", completed: false }
-      ]
+      ],
+      tasksCompleted: []
     };
   },
   created() {
