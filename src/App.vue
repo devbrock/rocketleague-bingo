@@ -32,62 +32,8 @@ export default {
   },
   data() {
     return {
-      tasks: [
-        {
-          title: "Score a hat trick",
-          completed: false
-        },
-        { title: "opponent has anime profile picture", completed: false },
-        { title: "3 minute overtime", completed: false },
-        { title: "rule 1", completed: false },
-        { title: "opponent is toxic", completed: false },
-        { title: "lag indicator", completed: false },
-        { title: "score an own goal", completed: false },
-        { title: "pre flip goal", completed: false },
-        { title: "ground pinch goal", completed: false },
-        { title: "turtle goal", completed: false },
-        { title: "miss an open net", completed: false },
-        { title: "passing play", completed: false },
-        { title: "musty flick", completed: false },
-        { title: "ceiling shot", completed: false },
-        { title: "terrible whiff", completed: false },
-        { title: "fake an opponent", completed: false },
-        { title: "score a bump/demo goal", completed: false },
-        { title: "opponent has weird car", completed: false },
-        { title: "get a low five", completed: false },
-        { title: "opponent rage quits", completed: false },
-        { title: "team pinch", completed: false },
-        { title: "epic save", completed: false },
-        { title: "score a double  tap", completed: false },
-        { title: "demo both opponents", completed: false },
-        { title: "score an air dribble goal", completed: false },
-        { title: "forfeit before 2:30", completed: false },
-        { title: "0 second goal", completed: false },
-        { title: "throw a game in the final minute", completed: false },
-        { title: "someone goes afk", completed: false },
-        { title: "score a flip reset goal", completed: false }
-      ],
       tasksCompleted: [13]
     };
-  },
-  created() {
-    var currentIndex = this.tasks.length,
-      temporaryValue,
-      randomIndex;
-
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-
-      // And swap it with the current element.
-      temporaryValue = this.tasks[currentIndex];
-      this.tasks[currentIndex] = this.tasks[randomIndex];
-      this.tasks[randomIndex] = temporaryValue;
-    }
-
-    return this.tasks;
   }
 };
 </script>
