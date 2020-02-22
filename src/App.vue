@@ -37,7 +37,7 @@ export default {
         { title: "opponent has anime profile picture", completed: false },
         { title: "3 minute overtime", completed: false },
         { title: "rule 1", completed: false },
-        { title: "enemy is toxic", completed: false },
+        { title: "opponent is toxic", completed: false },
         { title: "lag indicator", completed: false },
         { title: "pre flip goal", completed: false },
         { title: "ground pinch goal", completed: false },
