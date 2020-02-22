@@ -46,31 +46,39 @@ export default {
   data() {
     return {
       tasks: [
+        // positive play
         { title: "Score a hat trick", completed: false },
-        { title: "opponent has anime profile picture", completed: false },
-        { title: "3 minute overtime", completed: false },
-        { title: "rule 1", completed: false },
-        { title: "enemy is toxic", completed: false },
-        { title: "lag indicator", completed: false },
-        { title: "test challenge", completed: false },
+        { title: "passing play", completed: false },
+        { title: "fake an opponent", completed: false },
+        { title: "ceiling shot", completed: false },
+        { title: "musty flick", completed: false },
         { title: "pre flip goal", completed: false },
         { title: "ground pinch goal", completed: false },
-        { title: "turtle goal", completed: false },
-        { title: "miss an open net", completed: false },
-        { title: "passing play", completed: false },
-        { title: "musty flick", completed: false },
-        { title: "ceiling shot", completed: false },
-        { title: "terrible whiff", completed: false },
-        { title: "fake an opponent", completed: false },
-        { title: "score a bump/demo goal", completed: false },
-        { title: "opponent has weird car", completed: false },
-        { title: "get a low five", completed: false },
-        { title: "opponent rage quits", completed: false },
         { title: "team pinch", completed: false },
+        { title: "turtle goal", completed: false },
+        { title: "score a bump/demo goal", completed: false },
         { title: "epic save", completed: false },
         { title: "score a double  tap", completed: false },
+        { title: "score an air dribble goal", completed: false },
+
+        // negative play
+        { title: "miss an open net", completed: false },
+        { title: "terrible whiff", completed: false },
+
+        // neutral play
+        { title: "3 minute overtime", completed: false },
+        { title: "lag indicator", completed: false },
+        { title: "get a low five", completed: false },
+        { title: "rule 1", completed: false },
+
+        // opponent based
+        { title: "enemy is toxic", completed: false },
+        { title: "opponent has anime profile picture", completed: false },
+        { title: "opponent rage quits", completed: false },
+        { title: "opponent has weird car", completed: false },
         { title: "demo both opponents", completed: false },
-        { title: "score an air dribble goal", completed: false }
+
+        { title: "test challenge", completed: false },
       ]
     };
   },
