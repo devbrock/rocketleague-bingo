@@ -2,7 +2,7 @@
   <div
     class="px-4 py-8 text-gray-900 hover:bg-green-400 hover:text-gray-800 text-center flex-1"
     v-bind:class="{'line-through bg-green-500': task.completed}"
-    v-on:click="markComplete"
+    @click="toggleCompleted(); checkWin()"
   >
     <span class="uppercase">{{task.title}}</span>
   </div>
@@ -11,10 +11,13 @@
 <script>
 export default {
   name: "CardItem",
-  props: ["task"],
+  props: ["task", "taskId"],
   methods: {
-    markComplete() {
+    toggleCompleted() {
       this.task.completed = !this.task.completed;
+    },
+    checkWin() {
+      this.$emit("checkWin", this.task.title);
     }
   }
 };

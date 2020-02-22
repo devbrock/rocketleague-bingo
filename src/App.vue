@@ -11,7 +11,7 @@
         class="mt-4 px-4 py-2 bg-blue-900 text-gray-100 font-medium focus:outline-none hover:bg-gray-300 hover:text-blue-900"
         v-on:click="addChallenge"
       >Add A Challenge</button>-->
-      <BingoCard v-bind:tasks="tasks" />
+      <BingoCard v-bind:tasks="tasks" :tasksCompleted="tasksCompleted" />
     </div>
     <footer class="text-center text-sm text-gray-500 py-2 flex justify-center">
       <ul class="flex">
@@ -86,7 +86,8 @@ export default {
         { title: "opponent rage quits", completed: false },
         { title: "opponent has weird car", completed: false },
         { title: "demo both opponents", completed: false },
-      ]
+      ],
+      tasksCompleted: []
     };
   },
   created() {
