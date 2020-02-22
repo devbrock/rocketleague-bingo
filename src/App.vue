@@ -77,8 +77,6 @@ export default {
         { title: "opponent rage quits", completed: false },
         { title: "opponent has weird car", completed: false },
         { title: "demo both opponents", completed: false },
-
-        { title: "test challenge", completed: false },
       ]
     };
   },
