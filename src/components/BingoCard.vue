@@ -92,22 +92,6 @@ export default {
           this.won = true;
         }
       });
-
-      // this.won =
-      //   completedTasks.includes(1) &&
-      //   completedTasks.includes(2) &&
-      //   completedTasks.includes(3) &&
-      //   completedTasks.includes(4) &&
-      //   completedTasks.includes(5);
-
-      // let completed = JSON.stringify(completedTasks);
-      // console.log(completed);
-      // let winners = JSON.stringify(this.bingoArrays);
-      // console.log(winners);
-      // let found = winners.indexOf(completed);
-      // if (found != -1) {
-      //   this.won = true;
-      // }
     }
   }
 };
