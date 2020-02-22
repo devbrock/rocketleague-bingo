@@ -52,7 +52,6 @@ export default {
         { title: "rule 1", completed: false },
         { title: "enemy is toxic", completed: false },
         { title: "lag indicator", completed: false },
-        { title: "test challenge", completed: false },
         { title: "pre flip goal", completed: false },
         { title: "ground pinch goal", completed: false },
         { title: "turtle goal", completed: false },
@@ -70,7 +69,12 @@ export default {
         { title: "epic save", completed: false },
         { title: "score a double  tap", completed: false },
         { title: "demo both opponents", completed: false },
-        { title: "score an air dribble goal", completed: false }
+        { title: "score an air dribble goal", completed: false },
+        { title: "forfeit before 2:30", completed: false },
+        { title: "0 second goal", completed: false },
+        { title: "throw a game in the final minute", completed: false },
+        { title: "someone goes afk", completed: false },
+        { title: "score a flip reset goal", completed: false }
       ]
     };
   },
