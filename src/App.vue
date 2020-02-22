@@ -1,17 +1,7 @@
 <template>
   <div id="app" class="bg-gray-100 min-h-screen box-border">
     <div class="md:max-w-full lg:max-w-6xl md:px-2 lg:px-16 py-8 mx-auto min-h-screen">
-      <div class="text-center">
-        <img class="h-48 mx-auto" alt="rocket league logo" src="./assets/rocket-league-logo.png" />
-        <h1 class="font-bold text-4xl text-gray-900 mx-auto">Welcome To Rocket League Bingo!</h1>
-        <p class="text-sm text-gray-600">Here is your randomized challenge card!</p>
-      </div>
-
-      <!-- <button
-        class="mt-4 px-4 py-2 bg-blue-900 text-gray-100 font-medium focus:outline-none hover:bg-gray-300 hover:text-blue-900"
-        v-on:click="addChallenge"
-      >Add A Challenge</button>-->
-      <BingoCard v-bind:tasks="tasks" :tasksCompleted="tasksCompleted" />
+      <router-view></router-view>
     </div>
     <footer class="text-center text-sm text-gray-500 py-2 flex justify-center">
       <ul class="flex">
@@ -26,13 +16,10 @@
 
 <script>
 import "@/assets/styles.css";
-import BingoCard from "./components/BingoCard";
 
 export default {
   name: "App",
-  components: {
-    BingoCard
-  },
+  components: {},
   methods: {
     addChallenge() {
       const title = prompt("What would you like to add?");
@@ -53,7 +40,7 @@ export default {
         { title: "opponent has anime profile picture", completed: false },
         { title: "3 minute overtime", completed: false },
         { title: "rule 1", completed: false },
-        { title: "enemy is toxic", completed: false },
+        { title: "opponent is toxic", completed: false },
         { title: "lag indicator", completed: false },
         { title: "score an own goal", completed: false },
         { title: "pre flip goal", completed: false },
@@ -73,7 +60,12 @@ export default {
         { title: "epic save", completed: false },
         { title: "score a double  tap", completed: false },
         { title: "demo both opponents", completed: false },
-        { title: "score an air dribble goal", completed: false }
+        { title: "score an air dribble goal", completed: false },
+        { title: "forfeit before 2:30", completed: false },
+        { title: "0 second goal", completed: false },
+        { title: "throw a game in the final minute", completed: false },
+        { title: "someone goes afk", completed: false },
+        { title: "score a flip reset goal", completed: false }
       ],
       tasksCompleted: [13]
     };
