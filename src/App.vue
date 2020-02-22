@@ -60,16 +60,25 @@ export default {
         { title: "epic save", completed: false },
         { title: "score a double  tap", completed: false },
         { title: "score an air dribble goal", completed: false },
+        { title: "flip reset", completed: false },
+        { title: "0 second goal", completed: false },
 
         // negative play
         { title: "miss an open net", completed: false },
         { title: "terrible whiff", completed: false },
+        { title: "steal teammate's boost", completed: false },
+        { title: "own goal", completed: false },
+        { title: "risky back pass", completed: false },
+        { title: "throw a game in the final minute", completed: false },
 
         // neutral play
         { title: "3 minute overtime", completed: false },
         { title: "lag indicator", completed: false },
         { title: "get a low five", completed: false },
         { title: "rule 1", completed: false },
+        { title: "forfeit before 2:30", completed: false },
+        { title: "stops playing instead of forfeiting", completed: false },
+        { title: "ball hovers over goal line", completed: false },
 
         // opponent based
         { title: "enemy is toxic", completed: false },
