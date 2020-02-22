@@ -62,10 +62,10 @@ export default {
         [21, 22, 23, 24, 25],
         [1, 6, 11, 16, 21],
         [2, 7, 12, 17, 22],
-        [3, 8, 12, 18, 23],
+        [3, 8, 13, 18, 23],
         [4, 9, 14, 19, 24],
         [5, 10, 15, 20, 25],
-        [1, 7, 12, 17, 22],
+        [1, 7, 13, 19, 25],
         [5, 9, 13, 17, 21]
       ],
       won: false
@@ -73,17 +73,41 @@ export default {
   },
   methods: {
     checkWin(title) {
-      console.log("clicked " + title);
-      let index = this.$props.tasks.findIndex(x => x.title === title);
-      this.$props.tasksCompleted.push(index + 1);
-      console.log(this.$props.tasksCompleted);
+      let allTasks = this.$props.tasks;
+      let completedTasks = this.$props.tasksCompleted;
+      let index = allTasks.findIndex(x => x.title === title);
+      completedTasks.push(index + 1);
 
-      let completed = JSON.stringify(this.$props.tasksCompleted);
-      let winners = JSON.stringify(this.bingoArrays);
-      let found = winners.indexOf(completed);
-      if (found != -1) {
-        this.won = true;
-      }
+      console.log("completed");
+      console.log(completedTasks);
+
+      this.bingoArrays.forEach(arr => {
+        if (
+          completedTasks.includes(arr[0]) &&
+          completedTasks.includes(arr[1]) &&
+          completedTasks.includes(arr[2]) &&
+          completedTasks.includes(arr[3]) &&
+          completedTasks.includes(arr[4])
+        ) {
+          this.won = true;
+        }
+      });
+
+      // this.won =
+      //   completedTasks.includes(1) &&
+      //   completedTasks.includes(2) &&
+      //   completedTasks.includes(3) &&
+      //   completedTasks.includes(4) &&
+      //   completedTasks.includes(5);
+
+      // let completed = JSON.stringify(completedTasks);
+      // console.log(completed);
+      // let winners = JSON.stringify(this.bingoArrays);
+      // console.log(winners);
+      // let found = winners.indexOf(completed);
+      // if (found != -1) {
+      //   this.won = true;
+      // }
     }
   }
 };

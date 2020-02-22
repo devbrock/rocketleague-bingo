@@ -75,7 +75,7 @@ export default {
         { title: "demo both opponents", completed: false },
         { title: "score an air dribble goal", completed: false }
       ],
-      tasksCompleted: []
+      tasksCompleted: [13]
     };
   },
   created() {
