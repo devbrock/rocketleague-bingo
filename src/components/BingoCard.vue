@@ -13,7 +13,7 @@
       <h1 v-if="won" class="text-6xl text-center text-green-500 font-bold">You won!</h1>
       <img
         v-if="won"
-        src="https://media.giphy.com/media/xUPGcF89oa1gwy96LK/giphy.gif"
+        src="https://media.giphy.com/media/3o7btUyuZOFwkutqzC/giphy.gif"
         class="max-w-sm mx-auto"
       />
       <table class="table-auto mt-12 border-collapse bg-gray-300">
